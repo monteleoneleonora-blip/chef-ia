@@ -16,8 +16,11 @@ const DIRECT_KEY   = import.meta.env.VITE_ANTHROPIC_API_KEY
 export const USES_BACKEND = !!API_BASE
 
 // En mode backend, on poste sur /api/anthropic/messages — pas de /v1.
-// En mode direct, on poste sur le proxy Vite /api/anthropic/v1/messages.
-const PATH_PREFIX = USES_BACKEND ? `${API_BASE}/api/anthropic` : '/api/anthropic/v1'
+// En mode direct dev, on passe par le proxy Vite /api/anthropic/v1.
+// En mode direct prod, on appelle l'API Anthropic directement.
+const PATH_PREFIX = USES_BACKEND
+  ? `${API_BASE}/api/anthropic`
+  : (import.meta.env.PROD ? 'https://api.anthropic.com/v1' : '/api/anthropic/v1')
 
 /**
  * Retourne les headers HTTP communs a tous les appels Anthropic.
