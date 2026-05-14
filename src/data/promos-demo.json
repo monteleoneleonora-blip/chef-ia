@@ -1,0 +1,182 @@
+[
+  {
+    "id": "p01", "magasin": "carrefour", "nom": "Filets de saumon Atlantique",
+    "rayon": "Poissons", "prixNormal": 14.90, "prixPromo": 9.99,
+    "reduction": 33, "unite": "kg", "imageQuery": "salmon fillet",
+    "dateDebut": "2026-05-05", "dateFin": "2026-05-11"
+  },
+  {
+    "id": "p02", "magasin": "carrefour", "nom": "Escalopes de poulet fermier",
+    "rayon": "Volailles", "prixNormal": 10.50, "prixPromo": 7.20,
+    "reduction": 31, "unite": "kg", "imageQuery": "chicken breast",
+    "dateDebut": "2026-05-05", "dateFin": "2026-05-11"
+  },
+  {
+    "id": "p03", "magasin": "carrefour", "nom": "Tomates grappe",
+    "rayon": "Fruits & Légumes", "prixNormal": 2.99, "prixPromo": 1.49,
+    "reduction": 50, "unite": "kg", "imageQuery": "ripe tomatoes",
+    "dateDebut": "2026-05-05", "dateFin": "2026-05-11"
+  },
+  {
+    "id": "p04", "magasin": "carrefour", "nom": "Courgettes bio",
+    "rayon": "Fruits & Légumes", "prixNormal": 2.20, "prixPromo": 1.30,
+    "reduction": 41, "unite": "kg", "imageQuery": "zucchini courgette",
+    "dateDebut": "2026-05-05", "dateFin": "2026-05-11"
+  },
+  {
+    "id": "p05", "magasin": "carrefour", "nom": "Pâtes Barilla Rigatoni",
+    "rayon": "Épicerie", "prixNormal": 1.89, "prixPromo": 0.99,
+    "reduction": 48, "unite": "500g", "imageQuery": "pasta rigatoni",
+    "dateDebut": "2026-05-05", "dateFin": "2026-05-11"
+  },
+  {
+    "id": "p06", "magasin": "leclerc", "nom": "Steaks hachés 15% MG x6",
+    "rayon": "Boucherie", "prixNormal": 9.80, "prixPromo": 6.50,
+    "reduction": 34, "unite": "720g", "imageQuery": "ground beef patties",
+    "dateDebut": "2026-05-05", "dateFin": "2026-05-12"
+  },
+  {
+    "id": "p07", "magasin": "leclerc", "nom": "Beurre doux Président",
+    "rayon": "Crèmerie", "prixNormal": 3.20, "prixPromo": 2.10,
+    "reduction": 34, "unite": "250g", "imageQuery": "butter block",
+    "dateDebut": "2026-05-05", "dateFin": "2026-05-12"
+  },
+  {
+    "id": "p08", "magasin": "leclerc", "nom": "Crème fraîche épaisse",
+    "rayon": "Crèmerie", "prixNormal": 1.50, "prixPromo": 0.89,
+    "reduction": 41, "unite": "30cl", "imageQuery": "sour cream",
+    "dateDebut": "2026-05-05", "dateFin": "2026-05-12"
+  },
+  {
+    "id": "p09", "magasin": "leclerc", "nom": "Carottes nouvelles",
+    "rayon": "Fruits & Légumes", "prixNormal": 1.80, "prixPromo": 0.99,
+    "reduction": 45, "unite": "kg", "imageQuery": "fresh carrots",
+    "dateDebut": "2026-05-05", "dateFin": "2026-05-12"
+  },
+  {
+    "id": "p10", "magasin": "leclerc", "nom": "Œufs fermiers x12",
+    "rayon": "Crèmerie", "prixNormal": 4.20, "prixPromo": 2.79,
+    "reduction": 34, "unite": "boîte", "imageQuery": "farm eggs",
+    "dateDebut": "2026-05-05", "dateFin": "2026-05-12"
+  },
+  {
+    "id": "p11", "magasin": "intermarche", "nom": "Côte de porc",
+    "rayon": "Boucherie", "prixNormal": 7.90, "prixPromo": 5.20,
+    "reduction": 34, "unite": "kg", "imageQuery": "pork chop",
+    "dateDebut": "2026-05-05", "dateFin": "2026-05-11"
+  },
+  {
+    "id": "p12", "magasin": "intermarche", "nom": "Champignons de Paris",
+    "rayon": "Fruits & Légumes", "prixNormal": 2.80, "prixPromo": 1.69,
+    "reduction": 40, "unite": "500g", "imageQuery": "button mushrooms",
+    "dateDebut": "2026-05-05", "dateFin": "2026-05-11"
+  },
+  {
+    "id": "p13", "magasin": "intermarche", "nom": "Lardons fumés",
+    "rayon": "Charcuterie", "prixNormal": 2.50, "prixPromo": 1.49,
+    "reduction": 40, "unite": "200g", "imageQuery": "smoked lardons bacon",
+    "dateDebut": "2026-05-05", "dateFin": "2026-05-11"
+  },
+  {
+    "id": "p14", "magasin": "intermarche", "nom": "Riz basmati",
+    "rayon": "Épicerie", "prixNormal": 2.90, "prixPromo": 1.79,
+    "reduction": 38, "unite": "1kg", "imageQuery": "basmati rice",
+    "dateDebut": "2026-05-05", "dateFin": "2026-05-11"
+  },
+  {
+    "id": "p15", "magasin": "intermarche", "nom": "Poireaux",
+    "rayon": "Fruits & Légumes", "prixNormal": 1.90, "prixPromo": 0.99,
+    "reduction": 48, "unite": "botte", "imageQuery": "leeks fresh",
+    "dateDebut": "2026-05-05", "dateFin": "2026-05-11"
+  },
+  {
+    "id": "p16", "magasin": "grand-frais", "nom": "Pavés de thon rouge",
+    "rayon": "Poissons", "prixNormal": 22.00, "prixPromo": 14.90,
+    "reduction": 32, "unite": "kg", "imageQuery": "tuna steak",
+    "dateDebut": "2026-05-05", "dateFin": "2026-05-09"
+  },
+  {
+    "id": "p17", "magasin": "grand-frais", "nom": "Mangues Ataulfo",
+    "rayon": "Fruits exotiques", "prixNormal": 2.50, "prixPromo": 1.49,
+    "reduction": 40, "unite": "pièce", "imageQuery": "mango fresh",
+    "dateDebut": "2026-05-05", "dateFin": "2026-05-09"
+  },
+  {
+    "id": "p18", "magasin": "grand-frais", "nom": "Poivrons tricolores",
+    "rayon": "Fruits & Légumes", "prixNormal": 3.90, "prixPromo": 1.99,
+    "reduction": 49, "unite": "sachet 3", "imageQuery": "colorful bell peppers",
+    "dateDebut": "2026-05-05", "dateFin": "2026-05-09"
+  },
+  {
+    "id": "p19", "magasin": "grand-frais", "nom": "Asperges vertes",
+    "rayon": "Fruits & Légumes", "prixNormal": 4.50, "prixPromo": 2.99,
+    "reduction": 34, "unite": "botte 500g", "imageQuery": "green asparagus",
+    "dateDebut": "2026-05-05", "dateFin": "2026-05-09"
+  },
+  {
+    "id": "p20", "magasin": "grand-frais", "nom": "Fraises Gariguette",
+    "rayon": "Fruits", "prixNormal": 5.50, "prixPromo": 3.49,
+    "reduction": 37, "unite": "500g", "imageQuery": "strawberries gariguette",
+    "dateDebut": "2026-05-05", "dateFin": "2026-05-09"
+  },
+  {
+    "id": "p21", "magasin": "lidl", "nom": "Filet de cabillaud",
+    "rayon": "Poissons", "prixNormal": 11.99, "prixPromo": 7.99,
+    "reduction": 33, "unite": "kg", "imageQuery": "cod fillet",
+    "dateDebut": "2026-05-05", "dateFin": "2026-05-10"
+  },
+  {
+    "id": "p22", "magasin": "lidl", "nom": "Gruyère râpé",
+    "rayon": "Fromages", "prixNormal": 2.89, "prixPromo": 1.69,
+    "reduction": 42, "unite": "200g", "imageQuery": "grated gruyere cheese",
+    "dateDebut": "2026-05-05", "dateFin": "2026-05-10"
+  },
+  {
+    "id": "p23", "magasin": "lidl", "nom": "Pommes de terre Agria",
+    "rayon": "Fruits & Légumes", "prixNormal": 2.50, "prixPromo": 1.29,
+    "reduction": 48, "unite": "2kg", "imageQuery": "potatoes agria",
+    "dateDebut": "2026-05-05", "dateFin": "2026-05-10"
+  },
+  {
+    "id": "p24", "magasin": "lidl", "nom": "Lentilles vertes du Puy",
+    "rayon": "Épicerie", "prixNormal": 2.20, "prixPromo": 1.29,
+    "reduction": 41, "unite": "500g", "imageQuery": "green lentils",
+    "dateDebut": "2026-05-05", "dateFin": "2026-05-10"
+  },
+  {
+    "id": "p25", "magasin": "lidl", "nom": "Lait entier bio",
+    "rayon": "Crèmerie", "prixNormal": 1.09, "prixPromo": 0.79,
+    "reduction": 28, "unite": "1L", "imageQuery": "whole milk",
+    "dateDebut": "2026-05-05", "dateFin": "2026-05-10"
+  },
+  {
+    "id": "p26", "magasin": "aldi", "nom": "Cuisses de poulet",
+    "rayon": "Volailles", "prixNormal": 5.99, "prixPromo": 3.99,
+    "reduction": 33, "unite": "kg", "imageQuery": "chicken thighs",
+    "dateDebut": "2026-05-05", "dateFin": "2026-05-11"
+  },
+  {
+    "id": "p27", "magasin": "aldi", "nom": "Oignons jaunes",
+    "rayon": "Fruits & Légumes", "prixNormal": 1.49, "prixPromo": 0.79,
+    "reduction": 47, "unite": "1kg", "imageQuery": "yellow onions",
+    "dateDebut": "2026-05-05", "dateFin": "2026-05-11"
+  },
+  {
+    "id": "p28", "magasin": "aldi", "nom": "Huile d'olive vierge extra",
+    "rayon": "Épicerie", "prixNormal": 5.99, "prixPromo": 3.99,
+    "reduction": 33, "unite": "75cl", "imageQuery": "olive oil bottle",
+    "dateDebut": "2026-05-05", "dateFin": "2026-05-11"
+  },
+  {
+    "id": "p29", "magasin": "aldi", "nom": "Épinards frais",
+    "rayon": "Fruits & Légumes", "prixNormal": 2.49, "prixPromo": 1.39,
+    "reduction": 44, "unite": "250g", "imageQuery": "fresh spinach",
+    "dateDebut": "2026-05-05", "dateFin": "2026-05-11"
+  },
+  {
+    "id": "p30", "magasin": "aldi", "nom": "Yaourt grec nature",
+    "rayon": "Crèmerie", "prixNormal": 1.99, "prixPromo": 1.19,
+    "reduction": 40, "unite": "500g", "imageQuery": "greek yogurt",
+    "dateDebut": "2026-05-05", "dateFin": "2026-05-11"
+  }
+]

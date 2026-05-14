@@ -1,0 +1,402 @@
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700;9..144,800;9..144,900&family=Inter:wght@400;500;600;700;800;900&family=Italianno&family=Archivo+Black&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+/* ============================================================
+   Chef Privé — Design System "Dolce Vita" v2
+   Inspiration : affiches La Dolce Vita, jaune vif + bleu marine,
+                 spritz orange, rayures jaune/blanc, typographie
+                 sans-serif epaisse, ambiance trattoria moderne.
+   ============================================================ */
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  /* Typographies */
+  --font-display: 'Archivo Black', 'Fraunces', Georgia, serif;
+  --font-serif:   'Fraunces', 'Playfair Display', Georgia, serif;
+  --font-script:  'Italianno', 'Brush Script MT', cursive;
+  --font-sans:    'Inter', system-ui, -apple-system, sans-serif;
+  --font-heading: var(--font-display);
+
+  /* Tokens shadcn standards */
+  --color-sidebar-ring: var(--sidebar-ring);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar: var(--sidebar);
+  --color-chart-5: var(--chart-5);
+  --color-chart-4: var(--chart-4);
+  --color-chart-3: var(--chart-3);
+  --color-chart-2: var(--chart-2);
+  --color-chart-1: var(--chart-1);
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+
+  /* Tokens "dolce vita" v2 — JAUNE DOMINANT */
+  --color-dolce-yellow:       var(--dolce-yellow);
+  --color-dolce-yellow-deep:  var(--dolce-yellow-deep);
+  --color-dolce-yellow-soft:  var(--dolce-yellow-soft);
+  --color-dolce-blue:         var(--dolce-blue);
+  --color-dolce-blue-deep:    var(--dolce-blue-deep);
+  --color-dolce-blue-soft:    var(--dolce-blue-soft);
+  --color-dolce-cream:        var(--dolce-cream);
+  --color-dolce-ivory:        var(--dolce-ivory);
+  --color-dolce-citron:       var(--dolce-yellow);          /* alias pour compat */
+  --color-dolce-citron-deep:  var(--dolce-yellow-deep);     /* alias pour compat */
+  --color-dolce-orange:       var(--dolce-orange);
+  --color-dolce-orange-deep:  var(--dolce-orange-deep);
+  --color-dolce-basil:        var(--dolce-basil);
+  --color-dolce-basil-deep:   var(--dolce-basil-deep);
+  --color-dolce-terracotta:   var(--dolce-terracotta);
+  --color-dolce-rose:         var(--dolce-rose);
+  --color-dolce-stone:        var(--dolce-stone);
+
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  /* ── Palette Dolce Vita v2 — JAUNE DOMINANT ──────────────
+     Inspiree des affiches "La Dolce Vita" :
+     jaune Sicile vif + bleu Klein profond + orange Aperol
+     + blanc casse ivoire pour respirer.                       */
+
+  /* Le coeur : jaune affiche (saturee, lumineux) */
+  --dolce-yellow:       oklch(0.86 0.18 95);    /* jaune affiche La Dolce Vita */
+  --dolce-yellow-deep:  oklch(0.78 0.20 90);    /* jaune dore profond */
+  --dolce-yellow-soft:  oklch(0.94 0.10 95);    /* jaune pastel doux */
+
+  /* Bleu marine doux */
+  --dolce-blue:         oklch(0.42 0.12 265);   /* bleu marine moyen */
+  --dolce-blue-deep:    oklch(0.28 0.11 265);   /* bleu marine profond, posé */
+  --dolce-blue-soft:    oklch(0.92 0.04 230);   /* bleu ciel delicat (pour fonds) */
+
+  /* Orange Aperol — accent gourmand */
+  --dolce-orange:       oklch(0.75 0.18 50);    /* orange spritz */
+  --dolce-orange-deep:  oklch(0.65 0.22 40);    /* orange brule */
+
+  /* Verts basilic — touche fraicheur */
+  --dolce-basil:        oklch(0.68 0.16 145);
+  --dolce-basil-deep:   oklch(0.45 0.14 145);
+
+  /* Terracotta + rose poudre */
+  --dolce-terracotta:   oklch(0.65 0.16 35);
+  --dolce-rose:         oklch(0.85 0.08 20);
+
+  /* Neutres chauds */
+  --dolce-cream:        oklch(0.97 0.03 90);    /* blanc casse trattoria */
+  --dolce-ivory:        oklch(0.985 0.015 92);  /* ivoire respirant */
+  --dolce-stone:        oklch(0.72 0.02 90);
+
+  /* Tokens shadcn mappes */
+  --background:        var(--dolce-ivory);
+  --foreground:        var(--dolce-blue-deep);          /* texte en bleu Klein */
+  --card:              oklch(1 0 0);
+  --card-foreground:   var(--dolce-blue-deep);
+  --popover:           oklch(1 0 0);
+  --popover-foreground: var(--dolce-blue-deep);
+
+  --primary:           var(--dolce-blue-deep);
+  --primary-foreground: var(--dolce-yellow);            /* jaune sur bleu */
+
+  --secondary:         var(--dolce-yellow);
+  --secondary-foreground: var(--dolce-blue-deep);
+
+  --muted:             oklch(0.96 0.02 95);
+  --muted-foreground:  oklch(0.50 0.05 230);
+
+  --accent:            var(--dolce-yellow);             /* jaune vif comme accent */
+  --accent-foreground: var(--dolce-blue-deep);
+
+  --destructive:       oklch(0.62 0.22 28);
+
+  --border:            oklch(0.88 0.04 95);
+  --input:             oklch(0.94 0.03 95);
+  --ring:              var(--dolce-blue);
+
+  --chart-1: var(--dolce-yellow-deep);
+  --chart-2: var(--dolce-blue);
+  --chart-3: var(--dolce-orange);
+  --chart-4: var(--dolce-basil);
+  --chart-5: var(--dolce-terracotta);
+
+  --radius: 1rem;
+
+  --sidebar:               var(--dolce-yellow);
+  --sidebar-foreground:    var(--dolce-blue-deep);
+  --sidebar-primary:       var(--dolce-blue-deep);
+  --sidebar-primary-foreground: var(--dolce-yellow);
+  --sidebar-accent:        var(--dolce-yellow-soft);
+  --sidebar-accent-foreground: var(--dolce-blue-deep);
+  --sidebar-border:        oklch(0.85 0.10 95);
+  --sidebar-ring:          var(--dolce-blue);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--dolce-blue);
+    outline-offset: 3px;
+    border-radius: 6px;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-sans);
+  }
+
+  html {
+    font-family: var(--font-sans);
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    overscroll-behavior-y: contain;
+  }
+
+  /* Titres en sans-serif epaisse Archivo Black (style affiche) */
+  h1, h2, h3, .font-display {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+    line-height: 0.95;
+    font-weight: 900;
+  }
+
+  /* Variante serif si on veut */
+  .font-serif {
+    font-family: var(--font-serif);
+    font-variation-settings: 'opsz' 96, 'SOFT' 50, 'WONK' 0;
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+  }
+
+  .font-script {
+    font-family: var(--font-script);
+    line-height: 1;
+  }
+
+  ::-webkit-scrollbar { display: none; width: 0; height: 0; }
+  ::-webkit-scrollbar-track { display: none; }
+  ::-webkit-scrollbar-thumb { background: var(--dolce-yellow-deep); border-radius: 99px; }
+  ::-webkit-scrollbar-thumb:hover { background: var(--dolce-blue); }
+}
+
+@layer utilities {
+  /* ── Glass morphism ───────────────────────────────────── */
+  .glass {
+    background: oklch(1 0 0 / 0.85);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid oklch(0.88 0.04 95 / 0.6);
+  }
+  .glass-yellow {
+    background: oklch(0.86 0.18 95 / 0.85);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border: 1px solid oklch(0.78 0.20 90 / 0.5);
+  }
+  .glass-dark {
+    background: oklch(0.36 0.22 265 / 0.65);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid oklch(1 0 0 / 0.12);
+  }
+
+  .text-balance { text-wrap: balance; }
+
+  /* ── Carte hover ───────────────────────────────────────── */
+  .card-hover {
+    transition: transform 280ms cubic-bezier(0.16, 1, 0.3, 1),
+                box-shadow 280ms ease;
+  }
+  .card-hover:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 48px -12px oklch(0.36 0.22 265 / 0.18);
+  }
+
+  /* ── RAYURES JAUNE / BLANC — motif signature ──────────── */
+  .bg-dolce-stripes {
+    background-image: repeating-linear-gradient(
+      90deg,
+      var(--dolce-yellow)      0px, var(--dolce-yellow)      28px,
+      var(--dolce-cream)       28px, var(--dolce-cream)      52px
+    );
+  }
+  .bg-dolce-stripes-tight {
+    background-image: repeating-linear-gradient(
+      90deg,
+      var(--dolce-yellow)      0px, var(--dolce-yellow)      14px,
+      var(--dolce-cream)       14px, var(--dolce-cream)      26px
+    );
+  }
+  .bg-dolce-stripes-soft {
+    background-image: repeating-linear-gradient(
+      90deg,
+      var(--dolce-yellow-soft) 0px, var(--dolce-yellow-soft) 22px,
+      oklch(1 0 0)             22px, oklch(1 0 0)            42px
+    );
+  }
+  .bg-dolce-stripes-diag {
+    background-image: repeating-linear-gradient(
+      45deg,
+      var(--dolce-yellow)      0px, var(--dolce-yellow)      24px,
+      var(--dolce-cream)       24px, var(--dolce-cream)      44px
+    );
+  }
+
+  /* ── Gradients dolce vita ──────────────────────────────── */
+  .bg-dolce-sunset {
+    background: linear-gradient(135deg,
+      var(--dolce-yellow) 0%,
+      var(--dolce-orange) 50%,
+      var(--dolce-terracotta) 100%);
+  }
+  .bg-dolce-sea {
+    background: linear-gradient(180deg,
+      var(--dolce-blue-soft) 0%,
+      var(--dolce-blue) 60%,
+      var(--dolce-blue-deep) 100%);
+  }
+  .bg-dolce-lemon {
+    background: linear-gradient(135deg,
+      var(--dolce-yellow-soft) 0%,
+      var(--dolce-yellow) 50%,
+      var(--dolce-yellow-deep) 100%);
+  }
+  .bg-dolce-spritz {
+    background: linear-gradient(135deg,
+      var(--dolce-yellow) 0%,
+      var(--dolce-orange) 100%);
+  }
+  .bg-dolce-mediterranean {
+    background:
+      radial-gradient(ellipse at top,    var(--dolce-yellow) 0%, transparent 60%),
+      radial-gradient(ellipse at bottom, var(--dolce-blue-soft) 0%, transparent 60%),
+      var(--dolce-ivory);
+  }
+
+  /* ── Ombres signature ──────────────────────────────────── */
+  .shadow-dolce-soft  { box-shadow: 0 8px 32px -8px oklch(0.36 0.22 265 / 0.18); }
+  .shadow-dolce-warm  { box-shadow: 0 12px 40px -12px oklch(0.78 0.20 90 / 0.45); }
+  .shadow-dolce-deep  { box-shadow: 0 24px 64px -16px oklch(0.36 0.22 265 / 0.30); }
+  .shadow-dolce-sun   { box-shadow: 0 0 48px -8px oklch(0.86 0.18 95 / 0.60); }
+
+  /* ── Animations ────────────────────────────────────────── */
+  .animate-in {
+    animation-duration: 500ms;
+    animation-fill-mode: both;
+    animation-timing-function: cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  @keyframes fade-in            { from { opacity: 0; } to { opacity: 1; } }
+  @keyframes slide-up           { from { transform: translateY(24px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+  @keyframes slide-up-soft      { from { transform: translateY(8px);  opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+  @keyframes slide-down         { from { transform: translateY(-24px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+  @keyframes scale-in           { from { transform: scale(0.94); opacity: 0; } to { transform: scale(1); opacity: 1; } }
+  @keyframes pop-in             { 0% { transform: scale(0.6); opacity: 0; } 60% { transform: scale(1.05); opacity: 1; } 100% { transform: scale(1); } }
+  .fade-in       { animation-name: fade-in; }
+  .slide-up      { animation-name: slide-up; }
+  .slide-up-soft { animation-name: slide-up-soft; }
+  .slide-down    { animation-name: slide-down; }
+  .scale-in      { animation-name: scale-in; }
+  .pop-in        { animation-name: pop-in; }
+  .slide-in-from-bottom-4 { animation-name: slide-up; }
+
+  .story-snap-y {
+    scroll-snap-type: y mandatory;
+    overflow-y: auto;
+    overscroll-behavior-y: contain;
+    height: 100%;
+  }
+  .story-snap-item {
+    scroll-snap-align: start;
+    scroll-snap-stop: always;
+    /* La hauteur est definie par le conteneur (StoryFeed) en JS,
+       pour eviter le chevauchement avec le header sticky et la nav fixe. */
+  }
+
+  @keyframes dolce-bg-drift {
+    0%, 100% { background-position: 0% 0%; }
+    50%      { background-position: 100% 50%; }
+  }
+
+  @keyframes dolce-bob {
+    0%, 100% { transform: translateY(0)    rotate(0deg); }
+    33%      { transform: translateY(-8px) rotate(-3deg); }
+    66%      { transform: translateY(-4px) rotate(2deg); }
+  }
+  .animate-bob { animation: dolce-bob 4s ease-in-out infinite; }
+
+  @keyframes ciao-burst {
+    0%   { transform: scale(0)    rotate(-15deg); opacity: 0; }
+    50%  { transform: scale(1.15) rotate(5deg);  opacity: 1; }
+    100% { transform: scale(1)    rotate(0deg);  opacity: 1; }
+  }
+  .animate-ciao { animation: ciao-burst 600ms cubic-bezier(0.16, 1, 0.3, 1); }
+
+  /* ── Sticker citron qui flotte ─────────────────────────── */
+  @keyframes citron-float {
+    0%, 100% { transform: translateY(0) rotate(-8deg); }
+    50%      { transform: translateY(-10px) rotate(6deg); }
+  }
+  .animate-citron-float { animation: citron-float 5s ease-in-out infinite; }
+}
+
+@media print {
+  header, nav, aside, .print\:hidden { display: none !important; }
+  body { background: white; animation: none; }
+  .print\:block { display: block !important; }
+}
+
+/* ── Animations Chef ─────────────────────────────────────── */
+@keyframes chef-idle {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  25%      { transform: translateY(-3px) rotate(-1deg); }
+  75%      { transform: translateY(-2px) rotate(1deg); }
+}
+@keyframes chef-cooking {
+  0%, 100% { transform: rotate(-6deg); }
+  50%      { transform: rotate(6deg); }
+}
+@keyframes chef-excited {
+  0%, 100% { transform: scale(1)    rotate(0deg); }
+  20%      { transform: scale(1.08) rotate(-4deg); }
+  40%      { transform: scale(1.08) rotate(4deg);  }
+  60%      { transform: scale(1.05) rotate(-2deg); }
+  80%      { transform: scale(1.05) rotate(2deg);  }
+}
+.chef-idle    { animation: chef-idle    3.5s ease-in-out infinite; }
+.chef-cooking { animation: chef-cooking 1.2s ease-in-out infinite; }
+.chef-excited { animation: chef-excited 0.7s ease-in-out infinite; }
+
+/* Compat avec l'ancien naming */
+.robot-idle    { animation: chef-idle    3.5s ease-in-out infinite; }
+.robot-cooking { animation: chef-cooking 1.2s ease-in-out infinite; }
+.robot-excited { animation: chef-excited 0.7s ease-in-out infinite; }

@@ -1,0 +1,7 @@
+node_modules
+dist
+backend/node_modules
+backend/dist
+coverage
+package-lock.json
+src/data/recipeBank.js

@@ -1,0 +1,16 @@
+export const PRESET_DIETS = [
+  'Végétarien',
+  'Vegan',
+  'Sans gluten',
+  'Sans lactose',
+  'Halal',
+  'Casher',
+  'Pauvre en sucre',
+  'Riche en protéines',
+  'Faible en sel',
+  'Diabétique',
+  'Sans noix',
+  'Sans fruits de mer',
+  'Sans œufs',
+  'Sans porc',
+]
